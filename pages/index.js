@@ -602,85 +602,141 @@ const Home = (props) => {
                 </div>
               </div>
               <div className="contact-form-wrapper">
-                <form
-                  action="#"
-                  method="POST"
-                  data-form-id="788f501b-7b3b-4e6f-9b30-a248453c3f87"
-                  className="lead-form"
-                >
-                  <div className="form-grid">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        name="true"
-                        placeholder="Full Name"
-                        required="true"
-                        id="thq_true_W7Jg"
-                        data-form-field-id="thq_true_W7Jg"
-                        className="form-input"
-                      />
+                <div id="quoteWizard" className="quote-wizard" data-current-step="1">
+                  <div className="quote-wizard__progress">
+                    <div data-step="1" className="quote-wizard__step-indicator is-active">
+                      <div className="quote-wizard__step-circle">
+                        <span className="quote-wizard__step-number">1</span>
+                        <svg className="quote-wizard__step-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>
+                      </div>
+                      <span className="quote-wizard__step-label">Service</span>
                     </div>
-                    <div className="form-group">
-                      <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Phone Number"
-                        required="true"
-                        id="thq_phone_8n8A"
-                        data-form-field-id="thq_phone_8n8A"
-                        className="form-input"
-                      />
+                    <div className="quote-wizard__connector"></div>
+                    <div data-step="2" className="quote-wizard__step-indicator">
+                      <div className="quote-wizard__step-circle">
+                        <span className="quote-wizard__step-number">2</span>
+                        <svg className="quote-wizard__step-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>
+                      </div>
+                      <span className="quote-wizard__step-label">Details</span>
                     </div>
-                    <div className="form-group">
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Email Address"
-                        required="true"
-                        id="thq_email_yJMN"
-                        data-form-field-id="thq_email_yJMN"
-                        className="form-input"
-                      />
+                    <div className="quote-wizard__connector"></div>
+                    <div data-step="3" className="quote-wizard__step-indicator">
+                      <div className="quote-wizard__step-circle">
+                        <span className="quote-wizard__step-number">3</span>
+                        <svg className="quote-wizard__step-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>
+                      </div>
+                      <span className="quote-wizard__step-label">Timeline</span>
                     </div>
-                    <div className="form-group">
-                      <select
-                        name="property_type"
-                        required="true"
-                        id="thq_property_type_jty_"
-                        data-form-field-id="thq_property_type_jty_"
-                        className="form-input"
-                      >
-                        <option value="true" disabled="true" selected="true">
-                          Property Type
-                        </option>
-                        <option value="residential">Residential</option>
-                        <option value="commercial">Commercial</option>
-                      </select>
+                    <div className="quote-wizard__connector"></div>
+                    <div data-step="4" className="quote-wizard__step-indicator">
+                      <div className="quote-wizard__step-circle">
+                        <span className="quote-wizard__step-number">4</span>
+                        <svg className="quote-wizard__step-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>
+                      </div>
+                      <span className="quote-wizard__step-label">Contact</span>
                     </div>
-                    <div className="form-group full-width">
-                      <textarea
-                        name="message"
-                        placeholder="Tell us about your roof project..."
-                        required="true"
-                        id="thq_message_BbuY"
-                        data-form-field-id="thq_message_BbuY"
-                        className="form-input form-textarea"
-                      ></textarea>
+                    <div className="quote-wizard__connector"></div>
+                    <div data-step="5" className="quote-wizard__step-indicator">
+                      <div className="quote-wizard__step-circle">
+                        <span className="quote-wizard__step-number">5</span>
+                        <svg className="quote-wizard__step-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>
+                      </div>
+                      <span className="quote-wizard__step-label">Done</span>
                     </div>
                   </div>
-                  <button
-                    type="submit"
-                    id="thq_button_gsWT"
-                    name="button"
-                    data-form-field-id="thq_button_gsWT"
-                    className="full-width btn btn-xl btn-accent"
-                  >
-                    Request Free Estimate
-                  </button>
-                  <p className="form-disclaimer">
-                    Free Inspections • Free Estimates • No Obligation
-                  </p>
-                </form>
+                  <div className="quote-wizard__panels">
+                    <div data-panel="1" className="quote-wizard__step is-active">
+                      <h3 className="quote-wizard__heading">Which type of project?</h3>
+                      <p className="quote-wizard__hint">Pick what fits your roof — we&apos;ll tailor your estimate.</p>
+                      <div className="quote-wizard__grid quote-wizard__grid--services">
+                        <button type="button" data-field="service" data-value="Residential" className="quote-wizard__choice">
+                          <span aria-hidden="true" className="quote-wizard__choice-icon">🏠</span>
+                          <span className="quote-wizard__choice-label">Residential</span>
+                          <span aria-hidden="true" className="quote-wizard__choice-check">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+                          </span>
+                        </button>
+                        <button type="button" data-field="service" data-value="Commercial" className="quote-wizard__choice">
+                          <span aria-hidden="true" className="quote-wizard__choice-icon">🏢</span>
+                          <span className="quote-wizard__choice-label">Commercial</span>
+                          <span aria-hidden="true" className="quote-wizard__choice-check">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+                          </span>
+                        </button>
+                        <button type="button" data-field="service" data-value="Custom Work" className="quote-wizard__choice">
+                          <span aria-hidden="true" className="quote-wizard__choice-icon">🔨</span>
+                          <span className="quote-wizard__choice-label">Custom Work</span>
+                          <span aria-hidden="true" className="quote-wizard__choice-check">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+                          </span>
+                        </button>
+                      </div>
+                      <div className="quote-wizard__actions">
+                        <button type="button" data-action="next" disabled="true" className="quote-wizard__btn quote-wizard__btn--primary">Continue</button>
+                      </div>
+                    </div>
+                    <div data-panel="2" className="quote-wizard__step">
+                      <h3 className="quote-wizard__heading">Tell us about your roof</h3>
+                      <p className="quote-wizard__hint">Square footage helps us estimate. If you&apos;re not sure, just tap &ldquo;I don&apos;t know.&rdquo;</p>
+                      <div className="quote-wizard__field-group">
+                        <label className="quote-wizard__label">Square footage (optional)</label>
+                        <div className="quote-wizard__sqft-row">
+                          <input type="number" min="0" placeholder="e.g. 2000" data-field="sqft" id="wizardSqft" className="quote-wizard__input" />
+                          <button type="button" data-action="dont-know" id="wizardDontKnow" className="quote-wizard__pill quote-wizard__pill--inline">I don&apos;t know</button>
+                        </div>
+                      </div>
+                      <div className="quote-wizard__field-group">
+                        <label className="quote-wizard__label">Project details (optional)</label>
+                        <textarea data-field="details" placeholder="Anything you'd like Oscar to know — leaks, age of roof, access notes..." className="quote-wizard__textarea"></textarea>
+                      </div>
+                      <div className="quote-wizard__actions">
+                        <button type="button" data-action="back" className="quote-wizard__btn quote-wizard__btn--back">Back</button>
+                        <button type="button" data-action="next" className="quote-wizard__btn quote-wizard__btn--primary">Continue</button>
+                      </div>
+                    </div>
+                    <div data-panel="3" className="quote-wizard__step">
+                      <h3 className="quote-wizard__heading">When would you like it done?</h3>
+                      <p className="quote-wizard__hint">No pressure — even &ldquo;just exploring&rdquo; gets a real estimate.</p>
+                      <div className="quote-wizard__grid quote-wizard__grid--2">
+                        <button type="button" data-field="timeline" data-value="ASAP (within 2 weeks)" className="quote-wizard__pill">ASAP (within 2 weeks)</button>
+                        <button type="button" data-field="timeline" data-value="Within a month" className="quote-wizard__pill">Within a month</button>
+                        <button type="button" data-field="timeline" data-value="1–3 months" className="quote-wizard__pill">1–3 months</button>
+                        <button type="button" data-field="timeline" data-value="Just exploring" className="quote-wizard__pill">Just exploring</button>
+                      </div>
+                      <div className="quote-wizard__actions">
+                        <button type="button" data-action="back" className="quote-wizard__btn quote-wizard__btn--back">Back</button>
+                        <button type="button" data-action="next" disabled="true" className="quote-wizard__btn quote-wizard__btn--primary">Continue</button>
+                      </div>
+                    </div>
+                    <div data-panel="4" className="quote-wizard__step">
+                      <h3 className="quote-wizard__heading">How can Oscar reach you?</h3>
+                      <p className="quote-wizard__hint">Name is required. Email or phone (or both) — your call.</p>
+                      <div className="quote-wizard__fields">
+                        <input type="text" placeholder="Full Name *" data-field="fullName" id="wizardName" required="true" className="quote-wizard__input" />
+                        <input type="tel" placeholder="Phone Number" data-field="phone" id="wizardPhone" className="quote-wizard__input" />
+                        <input type="email" placeholder="Email Address" data-field="email" id="wizardEmail" className="quote-wizard__input" />
+                      </div>
+                      <p data-role="contact-error" className="quote-wizard__error" hidden="true">Please add an email or a phone number so we can reach you.</p>
+                      <div className="quote-wizard__actions">
+                        <button type="button" data-action="back" className="quote-wizard__btn quote-wizard__btn--back">Back</button>
+                        <button type="button" data-action="submit" className="quote-wizard__btn quote-wizard__btn--primary">Submit</button>
+                      </div>
+                    </div>
+                    <div data-panel="5" className="quote-wizard__step">
+                      <div className="quote-wizard__success">
+                        <div className="quote-wizard__success-icon">
+                          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>
+                        </div>
+                        <h3 className="quote-wizard__success-heading">Thank you!</h3>
+                        <p className="quote-wizard__success-body">Oscar will review your project and reach out within 24 hours with a free, no-obligation estimate.</p>
+                        <a href="tel:6028268259" className="quote-wizard__success-cta">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"></path></svg>
+                          <span>Or call now: (602) 826-8259</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -705,6 +761,19 @@ const Home = (props) => {
             </div>
           </a>
         </div>
+        <dialog id="thankYouModal" className="thank-you-dialog">
+          <button id="closeThankYou" aria-label="Close" className="thank-you-dialog__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M18 6 6 18M6 6l12 12"></path>
+            </svg>
+          </button>
+          <div className="thank-you-dialog__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>
+          </div>
+          <h2 className="thank-you-dialog__title">Thank you for choosing us!</h2>
+          <p className="thank-you-dialog__body">Thanks for selecting Oscar&apos;s Foam Roofing for your project. We&apos;ll be in touch within 24 hours with your free estimate.</p>
+          <a href="tel:6028268259" className="thank-you-dialog__cta">Or call now: (602) 826-8259</a>
+        </dialog>
         <dialog id="estimateModal" className="estimate-dialog">
           <div className="dialog-header">
             <h2 className="section-title">Free Roof Estimate</h2>
@@ -875,6 +944,151 @@ const Home = (props) => {
       }, 1000)
     })
   })
+
+  // Quote Wizard Logic
+  const wizard = document.getElementById("quoteWizard")
+  const thankYouModal = document.getElementById("thankYouModal")
+  const closeThankYou = document.getElementById("closeThankYou")
+
+  if (wizard) {
+    let currentStep = 1
+    const totalSteps = 5
+    const state = { service: null, sqft: "", details: "", timeline: null, fullName: "", phone: "", email: "" }
+
+    const indicators = wizard.querySelectorAll(".quote-wizard__step-indicator")
+    const connectors = wizard.querySelectorAll(".quote-wizard__connector")
+    const panels = wizard.querySelectorAll(".quote-wizard__step[data-panel]")
+
+    const setStep = (n) => {
+      currentStep = Math.max(1, Math.min(totalSteps, n))
+      wizard.dataset.currentStep = String(currentStep)
+      panels.forEach((p) => {
+        p.classList.toggle("is-active", Number(p.dataset.panel) === currentStep)
+      })
+      indicators.forEach((ind) => {
+        const s = Number(ind.dataset.step)
+        ind.classList.toggle("is-active", s === currentStep)
+        ind.classList.toggle("is-complete", s < currentStep)
+      })
+      connectors.forEach((c, i) => {
+        c.classList.toggle("is-complete", i + 1 < currentStep)
+      })
+    }
+
+    const updateContinueState = () => {
+      const step1Btn = wizard.querySelector('[data-panel="1"] [data-action="next"]')
+      if (step1Btn) step1Btn.disabled = !state.service
+      const step3Btn = wizard.querySelector('[data-panel="3"] [data-action="next"]')
+      if (step3Btn) step3Btn.disabled = !state.timeline
+    }
+
+    // Service choice (single-select)
+    wizard.querySelectorAll('[data-field="service"]').forEach((btn) => {
+      btn.addEventListener("click", () => {
+        wizard.querySelectorAll('[data-field="service"]').forEach((b) => b.classList.remove("is-selected"))
+        btn.classList.add("is-selected")
+        state.service = btn.dataset.value
+        updateContinueState()
+      })
+    })
+
+    // Timeline choice (single-select)
+    wizard.querySelectorAll('[data-field="timeline"]').forEach((btn) => {
+      btn.addEventListener("click", () => {
+        wizard.querySelectorAll('[data-field="timeline"]').forEach((b) => b.classList.remove("is-selected"))
+        btn.classList.add("is-selected")
+        state.timeline = btn.dataset.value
+        updateContinueState()
+      })
+    })
+
+    // Sqft input
+    const sqftInput = document.getElementById("wizardSqft")
+    if (sqftInput) {
+      sqftInput.addEventListener("input", () => {
+        state.sqft = sqftInput.value
+      })
+    }
+    const dontKnow = document.getElementById("wizardDontKnow")
+    if (dontKnow && sqftInput) {
+      dontKnow.addEventListener("click", () => {
+        state.sqft = "I don't know"
+        sqftInput.value = ""
+        sqftInput.placeholder = "I don't know"
+        dontKnow.classList.add("is-selected")
+      })
+      sqftInput.addEventListener("focus", () => {
+        dontKnow.classList.remove("is-selected")
+        sqftInput.placeholder = "e.g. 2000"
+      })
+    }
+    // Details textarea
+    const detailsArea = wizard.querySelector('[data-field="details"]')
+    if (detailsArea) {
+      detailsArea.addEventListener("input", () => {
+        state.details = detailsArea.value
+      })
+    }
+
+    // Contact field bindings
+    ;["fullName", "phone", "email"].forEach((field) => {
+      const el = wizard.querySelector('[data-field="' + field + '"]')
+      if (el) {
+        el.addEventListener("input", () => {
+          state[field] = el.value
+          el.classList.remove("has-error")
+          const errorEl = wizard.querySelector('[data-role="contact-error"]')
+          if (errorEl) errorEl.hidden = true
+        })
+      }
+    })
+
+    // Action buttons
+    wizard.addEventListener("click", (e) => {
+      const target = e.target.closest("[data-action]")
+      if (!target) return
+      const action = target.dataset.action
+      if (action === "next") {
+        if (currentStep === 1 && !state.service) return
+        if (currentStep === 3 && !state.timeline) return
+        setStep(currentStep + 1)
+      } else if (action === "back") {
+        setStep(currentStep - 1)
+      } else if (action === "submit") {
+        // Validate contact: name required, email or phone required
+        const nameEl = document.getElementById("wizardName")
+        const phoneEl = document.getElementById("wizardPhone")
+        const emailEl = document.getElementById("wizardEmail")
+        const errorEl = wizard.querySelector('[data-role="contact-error"]')
+        let valid = true
+        if (!state.fullName.trim()) {
+          if (nameEl) nameEl.classList.add("has-error")
+          valid = false
+        }
+        if (!state.phone.trim() && !state.email.trim()) {
+          if (phoneEl) phoneEl.classList.add("has-error")
+          if (emailEl) emailEl.classList.add("has-error")
+          if (errorEl) errorEl.hidden = false
+          valid = false
+        }
+        if (!valid) return
+        setStep(5)
+        if (thankYouModal && typeof thankYouModal.showModal === "function") {
+          thankYouModal.showModal()
+        }
+      }
+    })
+  }
+
+  if (thankYouModal && closeThankYou) {
+    closeThankYou.addEventListener("click", () => thankYouModal.close())
+    thankYouModal.addEventListener("click", (e) => {
+      const r = thankYouModal.getBoundingClientRect()
+      if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+        thankYouModal.close()
+      }
+    })
+  }
 })()
 </script>`}
             ></Script>
