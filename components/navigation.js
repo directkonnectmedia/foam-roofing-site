@@ -16,7 +16,7 @@ const Navigation = (props) => {
                   <span className="navigation-brand section-title">
                     <span>
                       {' '}
-                      Oscar&apos;s
+                      Zamora
                       <span
                         dangerouslySetInnerHTML={{
                           __html: ' ',
@@ -24,7 +24,7 @@ const Navigation = (props) => {
                       />
                     </span>
                     <span className="navigation-thq-navigation-accent-text-elm1">
-                      Foam Roofing
+                      Roofing Solutions LLC
                     </span>
                   </span>
                 </div>
@@ -190,7 +190,7 @@ const Navigation = (props) => {
                   <span className="navigation-brand section-title">
                     <span>
                       {' '}
-                      Oscar&apos;s
+                      Zamora
                       <span
                         dangerouslySetInnerHTML={{
                           __html: ' ',
@@ -198,7 +198,7 @@ const Navigation = (props) => {
                       />
                     </span>
                     <span className="navigation-thq-navigation-accent-text-elm2">
-                      Foam Roofing
+                      Roofing Solutions LLC
                     </span>
                   </span>
                 </div>

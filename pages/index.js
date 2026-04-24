@@ -221,7 +221,7 @@ const Home = (props) => {
               <div className="service-card">
                 <div className="service-image-wrapper">
                   <img
-                    src="https://images.pexels.com/photos/32387194/pexels-photo-32387194.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+                    src="/external/residential-foam-roof.jpg"
                     alt="Residential Foam Roof"
                     className="service-img"
                   />

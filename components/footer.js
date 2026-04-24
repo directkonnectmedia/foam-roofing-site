@@ -12,8 +12,8 @@ const Footer = (props) => {
             <div className="footer-grid">
               <div className="footer-column footer-brand-column">
                 <div className="footer-logo-container">
-                  <span className="footer-logo-text">OSCAR&apos;S</span>
-                  <span className="footer-logo-sub">FOAM ROOFING</span>
+                  <span className="footer-logo-text">ZAMORA</span>
+                  <span className="footer-logo-sub">ROOFING SOLUTIONS LLC</span>
                 </div>
                 <p className="footer-tagline">
                   Arizona&apos;s energy-efficient roofing experts. Family-owned,
@@ -156,7 +156,7 @@ const Footer = (props) => {
             <div className="footer-bottom">
               <div className="footer-copyright">
                 <span>
-                  &amp;copy; 2026 Oscar&apos;s Foam Roofing. Licensed &amp;
+                  &amp;copy; 2026 Zamora Roofing Solutions LLC. Licensed &amp;
                   Insured. Serving Arizona.
                 </span>
               </div>
