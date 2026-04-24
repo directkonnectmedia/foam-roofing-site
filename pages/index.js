@@ -44,11 +44,11 @@ const Home = (props) => {
               Family-owned. Desert-tested. Built to outlast the sun.
             </p>
             <div className="hero-actions">
-              <button id="openHeroForm" className="btn btn-primary btn-xl">
+              <button id="openHeroForm" className="btn btn-accent btn-xl">
                 Get a Free Estimate
               </button>
               <a href="tel:6028268259">
-                <div className="hero-call-btn btn btn-xl btn-outline">
+                <div className="hero-call-btn btn btn-xl btn-accent">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -511,48 +511,6 @@ const Home = (props) => {
                 src="https://images.pexels.com/photos/6961112/pexels-photo-6961112.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
                 alt="Rooftop Inspection"
               />
-            </div>
-          </div>
-        </section>
-        <section className="trust-strip">
-          <div className="trust-strip-container">
-            <div className="stats-grid">
-              <div className="stat-card">
-                <div className="stat-value">
-                  <span>25+</span>
-                </div>
-                <div className="stat-label">
-                  <span>Years of Expertise</span>
-                </div>
-              </div>
-              <div className="stat-card">
-                <div className="stat-value">
-                  <span>50+</span>
-                </div>
-                <div className="stat-label">
-                  <span>Year Roof Lifespan</span>
-                </div>
-              </div>
-              <div className="stat-card">
-                <div className="stat-value">
-                  <span>40%</span>
-                </div>
-                <div className="stat-label">
-                  <span>Energy Savings</span>
-                </div>
-              </div>
-            </div>
-            <div className="testimonial-slider">
-              <div className="testimonial-item">
-                <p className="section-content">
-                  &quot;Oscar and his team were professional, fast, and the
-                  price was exactly what he quoted. Our AC runs half as much
-                  now!&quot;
-                </p>
-                <span className="testimonial-author">
-                  — Michael R., Phoenix
-                </span>
-              </div>
             </div>
           </div>
         </section>

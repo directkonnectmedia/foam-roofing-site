@@ -1259,8 +1259,9 @@
 }
  
 .hero-call-btn {
-  color: var(--color-surface);
-  border-color: var(--color-surface);
+  color: var(--color-on-accent);
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
 }
  
 .trust-item {
@@ -1496,9 +1497,11 @@
  
 .cta-banner {
   display: flex;
-  padding: var(--spacing-4xl) 0;
+  padding: calc(var(--spacing-4xl) * 2) 0;
+  min-height: 70vh;
   position: relative;
-  background: url("https://images.pexels.com/photos/12588499/pexels-photo-12588499.jpeg?auto=compress&cs=tinysrgb&h=650&w=940") center/cover no-repeat;
+  background: url("https://images.pexels.com/photos/12588499/pexels-photo-12588499.jpeg?auto=compress&cs=tinysrgb&h=1300&w=1880") center/cover no-repeat;
+  background-attachment: fixed;
   align-items: center;
 }
  
@@ -1658,8 +1661,9 @@
 }
  
 .hero-call-btn:hover {
-  color: var(--color-primary);
-  background: var(--color-surface);
+  color: var(--color-on-accent);
+  border-color: color-mix(in oklab, var(--color-accent) 90%, var(--color-surface));
+  background: color-mix(in oklab, var(--color-accent) 90%, var(--color-surface));
 }
  
 .value-prop:hover {
