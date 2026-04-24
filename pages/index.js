@@ -514,40 +514,18 @@ const Home = (props) => {
             </div>
           </div>
         </section>
-        <section className="cta-banner">
-          <div className="cta-overlay"></div>
-          <div className="cta-container">
-            <div className="cta-content">
-              <h2 className="section-title">Ready for a Lifetime Roof?</h2>
-              <p className="section-content">
-                Stop letting the sun bake your home and your budget. Get a
-                professional foam roof that pays for itself in energy savings.
-              </p>
-              <p className="cta-note">
-                Free Inspections • Free Estimates • No Obligation
-              </p>
-            </div>
-            <div className="cta-actions">
-              <button id="openCtaForm" className="btn btn-xl btn-accent">
-                Request Free Estimate
-              </button>
-              <a href="tel:6028268259">
-                <div className="btn btn-xl btn-outline">
-                  <span>Call Oscar Now</span>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section>
         <section id="estimate-form" className="contact-section">
+          <div className="contact-overlay"></div>
           <div className="contact-container">
             <div className="contact-grid">
               <div className="contact-info">
-                <h2 className="section-title">Get In Touch</h2>
-                <p className="section-content">
-                  We serve homeowners and business owners across the entire
-                  state of Arizona. No project is too large or too small for our
-                  family team.
+                <span className="contact-eyebrow">Ready for a lifetime roof?</span>
+                <h2 className="section-title contact-title">
+                  Let&apos;s Get <span className="accent-word">Started</span>
+                </h2>
+                <p className="section-content contact-lead">
+                  Family-owned and serving homeowners and businesses across
+                  Arizona. Free inspection, honest pricing, no obligation.
                 </p>
                 <div className="contact-details">
                   <div className="detail-item">
@@ -811,17 +789,10 @@ const Home = (props) => {
   // Modal Functionality
   const modal = document.getElementById("estimateModal")
   const openHeroBtn = document.getElementById("openHeroForm")
-  const openCtaBtn = document.getElementById("openCtaForm")
   const closeBtn = document.getElementById("closeModal")
 
   if (modal && openHeroBtn) {
     openHeroBtn.addEventListener("click", () => {
-      modal.showModal()
-    })
-  }
-
-  if (modal && openCtaBtn) {
-    openCtaBtn.addEventListener("click", () => {
       modal.showModal()
     })
   }

@@ -1546,35 +1546,88 @@
 }
  
 .contact-section {
-  padding: var(--spacing-4xl) 0;
-  background: var(--color-surface);
+  position: relative;
+  padding: calc(var(--spacing-4xl) * 2.5) 0;
+  min-height: 90vh;
+  background: url("/external/desert-background.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(135deg, rgba(15, 17, 19, 0.88) 0%, rgba(47, 58, 68, 0.75) 50%, rgba(232, 90, 18, 0.35) 100%);
+  pointer-events: none;
 }
  
 .contact-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
   margin: 0 auto;
   padding: 0 var(--spacing-xl);
   max-width: var(--content-max-width);
 }
- 
+
 .contact-grid {
   gap: var(--spacing-4xl);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
 }
- 
+
 .contact-info {
-  flex: 1;
+  color: var(--color-surface);
 }
- 
+
+.contact-eyebrow {
+  display: inline-block;
+  padding: 6px 14px;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-on-accent);
+  background: var(--color-accent);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 999px;
+}
+
+.contact-title {
+  color: var(--color-surface);
+  font-size: clamp(2.5rem, 1.5rem + 3vw, 4.5rem);
+  line-height: 1.05;
+  margin-bottom: var(--spacing-xl);
+}
+
+.accent-word {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+.contact-lead {
+  color: color-mix(in oklab, var(--color-surface) 88%, transparent);
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+  max-width: 500px;
+}
+
 .contact-form-wrapper {
-  flex: 1;
-  padding: var(--spacing-3xl);
-  background: var(--color-surface-elevated);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-  border-radius: var(--border-radius-card);
+  padding: clamp(var(--spacing-2xl), 4vw, var(--spacing-4xl));
+  background: color-mix(in oklab, var(--color-surface) 97%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid color-mix(in oklab, var(--color-surface) 50%, transparent);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius-lg);
 }
  
 .contact-details {
-  gap: var(--spacing-xl);
+  gap: var(--spacing-md);
   display: flex;
   margin-top: var(--spacing-3xl);
   flex-direction: column;
@@ -1584,13 +1637,37 @@
  
 .detail-item {
   gap: var(--spacing-lg);
-  color: var(--color-on-surface);
+  color: var(--color-surface);
   display: flex;
   align-items: center;
+  padding: var(--spacing-sm) 0;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+}
+
+.detail-item > svg {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  color: var(--color-on-accent);
+  background: var(--color-accent);
+  border-radius: 50%;
+  box-shadow: 0 6px 16px -4px rgba(232, 90, 18, 0.5);
+}
+
+.detail-item a {
+  color: var(--color-surface);
+  text-decoration: none;
+  transition: color var(--duration-fast) ease;
+}
+
+.detail-item a:hover {
+  color: var(--color-accent);
 }
  
 .form-grid {
-  gap: var(--spacing-md);
+  gap: var(--spacing-lg);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -1610,16 +1687,29 @@
  
 .form-input {
   width: 100%;
-  border: 1px solid var(--color-border);
-  padding: var(--spacing-md) var(--spacing-xl);
+  border: 1.5px solid var(--color-border);
+  padding: 16px 18px;
   background: var(--color-surface);
+  color: var(--color-on-surface);
   font-family: var(--font-family-body);
+  font-size: var(--font-size-md);
   border-radius: var(--border-radius-control);
+  transition: border-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
 }
- 
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--color-accent) 22%, transparent);
+}
+
+.form-input::placeholder {
+  color: color-mix(in oklab, var(--color-on-surface) 45%, transparent);
+}
+
 .form-textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 140px;
 }
  
 .mobile-sticky-cta {
@@ -1774,7 +1864,18 @@
     width: 100%;
   }
   .contact-grid {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+  .contact-section {
+    background-attachment: scroll;
+    padding: calc(var(--spacing-4xl) * 1.5) 0;
+    min-height: auto;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .full-width {
+    grid-column: span 1;
   }
 }
  
