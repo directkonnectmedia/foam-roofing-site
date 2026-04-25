@@ -197,7 +197,8 @@ const Home = (props) => {
                 Advanced SPF roofing for energy efficiency and durability.
               </p>
             </div>
-            <div className="services-grid">
+            <div className="services-scroller">
+              <div id="servicesGrid" className="services-grid">
               <div className="service-card">
                 <div className="service-image-wrapper">
                   <img
@@ -319,6 +320,27 @@ const Home = (props) => {
                   </a>
                 </div>
               </div>
+              </div>
+              <button
+                type="button"
+                id="servicesNext"
+                aria-label="Scroll to next service"
+                className="services-scroller__arrow services-scroller__arrow--next"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="9 6 15 12 9 18"></polyline>
+                </svg>
+              </button>
+              <button
+                type="button"
+                id="servicesPrev"
+                aria-label="Scroll to previous service"
+                className="services-scroller__arrow services-scroller__arrow--prev"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="15 6 9 12 15 18"></polyline>
+                </svg>
+              </button>
             </div>
           </div>
         </section>
@@ -912,6 +934,34 @@ const Home = (props) => {
       }, 1000)
     })
   })
+
+  // Services Scroller Arrows
+  const servicesGrid = document.getElementById("servicesGrid")
+  const servicesNext = document.getElementById("servicesNext")
+  const servicesPrev = document.getElementById("servicesPrev")
+  if (servicesGrid && servicesNext && servicesPrev) {
+    const cardScrollAmount = () => {
+      const card = servicesGrid.querySelector(".service-card")
+      if (!card) return 400
+      const styles = window.getComputedStyle(servicesGrid)
+      const gap = parseInt(styles.columnGap || styles.gap || "0", 10) || 0
+      return card.getBoundingClientRect().width + gap
+    }
+    const updateArrowState = () => {
+      const max = servicesGrid.scrollWidth - servicesGrid.clientWidth - 4
+      servicesPrev.classList.toggle("is-hidden", servicesGrid.scrollLeft <= 4)
+      servicesNext.classList.toggle("is-hidden", servicesGrid.scrollLeft >= max)
+    }
+    servicesNext.addEventListener("click", () => {
+      servicesGrid.scrollBy({ left: cardScrollAmount(), behavior: "smooth" })
+    })
+    servicesPrev.addEventListener("click", () => {
+      servicesGrid.scrollBy({ left: -cardScrollAmount(), behavior: "smooth" })
+    })
+    servicesGrid.addEventListener("scroll", updateArrowState, { passive: true })
+    window.addEventListener("resize", updateArrowState)
+    updateArrowState()
+  }
 
   // Quote Wizard Logic
   const wizard = document.getElementById("quoteWizard")
