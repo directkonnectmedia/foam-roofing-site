@@ -1333,44 +1333,44 @@
 }
  
 .about-section {
-  padding: var(--spacing-4xl) 0;
-  background: var(--color-surface);
+  padding: var(--spacing-xl) 0;
+  background: #ffffff;
 }
- 
+
 .about-container {
   margin: 0 auto;
   padding: 0 var(--spacing-xl);
   max-width: var(--content-max-width);
 }
- 
+
 .about-grid {
-  gap: var(--spacing-4xl);
-  display: flex;
-  align-items: center;
+  display: block;
 }
- 
-.about-text-content {
-  flex: 6;
-}
- 
+
 .about-values {
-  gap: var(--spacing-2xl);
-  flex: 4;
-  display: flex;
-  flex-direction: column;
-}
- 
-.value-prop {
   gap: var(--spacing-xl);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.value-prop {
+  gap: var(--spacing-lg);
   display: flex;
-  padding: var(--spacing-xl);
+  padding: var(--spacing-lg) var(--spacing-xl);
   background: var(--color-surface-elevated);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
   align-items: center;
   border-left: 4px solid var(--color-accent);
+  border-radius: 12px;
 }
- 
+
+.value-prop .section-subtitle {
+  margin: 0;
+  font-size: var(--font-size-md);
+  line-height: 1.25;
+}
+
 .value-icon {
   color: var(--color-accent);
   flex-shrink: 0;
@@ -1402,31 +1402,35 @@
   flex: 1;
   color: var(--color-on-surface);
   display: flex;
-  overflow: hidden;
   background: var(--color-surface-elevated);
   transition: transform 0.3s ease;
-  border-radius: var(--border-radius-card);
+  border-radius: 1.25rem;
+  padding: 14px;
   flex-direction: column;
 }
- 
+
 .service-image-wrapper {
-  height: 240px;
+  height: 340px;
   overflow: hidden;
+  border-radius: 1rem;
+  position: relative;
+  box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.18);
 }
- 
+
 .service-card-body {
   gap: var(--spacing-md);
   display: flex;
-  padding: var(--spacing-2xl);
+  padding: var(--spacing-xl) var(--spacing-md) var(--spacing-md);
   flex-grow: 1;
   flex-direction: column;
 }
- 
+
 .service-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
+  display: block;
 }
  
 .service-card-icon {
@@ -1965,8 +1969,14 @@
   .about-grid {
     flex-direction: column;
   }
+  .about-values {
+    grid-template-columns: 1fr;
+  }
   .services-grid {
     flex-direction: column;
+  }
+  .service-image-wrapper {
+    height: 260px;
   }
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);

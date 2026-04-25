@@ -120,26 +120,6 @@ const Home = (props) => {
         <section className="about-section">
           <div className="about-container">
             <div className="about-grid">
-              <div className="about-text-content">
-                <h2 className="section-title">
-                  Built on Decades of Desert Expertise
-                </h2>
-                <div className="section-content">
-                  <p>
-                    Oscar built this company on honest work, straight pricing,
-                    and roofs that actually hold up to Arizona heat.
-                    Family-owned and operated, serving homeowners and businesses
-                    across the state since our founding.
-                  </p>
-                  <p>
-                    We emphasize transparency, craftsmanship, and the climate
-                    expertise that only comes from decades in the desert. When
-                    you choose Oscar&apos;s, you&apos;re choosing a legacy of
-                    protection that thrives in 115°F summers and monsoon rains
-                    alike.
-                  </p>
-                </div>
-              </div>
               <div className="about-values">
                 <div className="value-prop">
                   <div className="value-icon">
@@ -244,10 +224,6 @@ const Home = (props) => {
                     </svg>
                   </div>
                   <h3 className="section-subtitle">Residential Foam Roofing</h3>
-                  <p className="section-content">
-                    Monolithic membrane provides R-6.5 insulation per inch and
-                    20–40% cooling cost reduction.
-                  </p>
                   <a href="#">
                     <div className="btn btn-link">
                       <span>Learn More</span>
@@ -301,10 +277,6 @@ const Home = (props) => {
                     </svg>
                   </div>
                   <h3 className="section-subtitle">Commercial Foam Roofing</h3>
-                  <p className="section-content">
-                    SRP/APS rebate eligible systems with a 30–50+ year lifespan
-                    through periodic maintenance.
-                  </p>
                   <a href="#">
                     <div className="btn btn-link">
                       <span>Learn More</span>
@@ -340,10 +312,6 @@ const Home = (props) => {
                   <h3 className="section-subtitle">
                     Maintenance &amp; Recoating
                   </h3>
-                  <p className="section-content">
-                    Extend your roof&apos;s life with reflective white topcoats
-                    and professional inspections.
-                  </p>
                   <a href="#">
                     <div className="btn btn-link">
                       <span>Learn More</span>
